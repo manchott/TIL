@@ -1,0 +1,43 @@
+<!-- // 01_weekend.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>요일</h3>
+    <ul id="day">
+      <li>월요일</li>
+      <li>화요일</li>
+      <li>수요일</li>
+      <li>목요일</li>
+      <li>금요일</li>
+    </ul>
+
+    <script>
+      const day = document.querySelector('#day')
+
+      const sunday = document.createElement('li')
+      sunday.innerText = '일요일'
+      day.prepend(sunday)
+      
+      const saturday = document.createElement('li')
+      saturday.innerText = '토요일'
+      day.append(saturday)
+
+      const startP = document.createElement('p')
+      startP.innerText = '한 주의 시작'
+      day.before(startP)
+
+      const endP = document.createElement('p')
+      endP.innerText = '한 주의 끝'
+      day.after(endP)
+
+      const delSunday = day.children[0]
+      delSunday.remove()
+    </script>
+  </body>
+</html>
