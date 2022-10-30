@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Boards</h1>
+  <a href="{% url 'boards:create' %}">create</a><br>
+  <hr>
+  {% for board in boards %}
+    <a href="{% url 'boards:detail' board.pk %}">{{ board.title }}</a>
+    
+  {% endfor %}
+{% endblock content %}
