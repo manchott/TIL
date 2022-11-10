@@ -11,6 +11,7 @@ export default {
   },
   computed: {
     totalPrice: function () {
+      this.$store.commit('addOrder', this.menu)
     },
   },
 }
